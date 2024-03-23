@@ -1,0 +1,3 @@
+[submodule "hw04/src/upgraded_crop_code"]
+	path = hw04/src/upgraded_crop_code
+	url = https://github.com/gnehs/ct2024s-packages
