@@ -188,7 +188,9 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-        因為我的電腦是 AMD GPU，要把程式碼從 CUDA 改成 ROCm 相當困難，所以我改為嘗試把程式碼用 colab 跑，但因為原來的程式碼使用的是舊版的 python，雖然有嘗試過把它改成新版兼容，但訓練出來的東西看起來頗有問題，所以我只做了 Simple Baseline 的作業。
+        因為我的電腦是 AMD GPU，要把程式碼從 CUDA 改成 ROCm 相當困難，所以我改為嘗試把程式碼用 colab 跑，<del>但因為原來的程式碼使用的是舊版的 python，雖然有嘗試過把它改成新版兼容，但訓練出來的東西看起來頗有問題，所以我只做了 Simple Baseline 的作業。</del>
+        通過使用 zi2zi-pytorch, 成功在 colab 上面跑出結果，<a href="https://colab.research.google.com/drive/1iW4S7dpEFnplURXVHXQPuctueIxbf1aq?usp=sharing">這裏是 colab 的程式碼</a>。用 T4 訓練了大概半天，或者用 A100 訓練大概一個多小時，約莫 4000 多個 step 就能讓某些簡單的字有不錯的校果。
+        不過因為 pytorch 和 tenserflow 的版本不同，最後沒能把堃字單獨生成出來。
     </div>
   </div>
 
@@ -214,12 +216,12 @@
           <td>Simple baseline - 產生驗證樣本 (4808字/2) (放入image_val，壓縮檔上傳)</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox3" ></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox3" checked></td>
           <td id='m3'>4</td>
           <td>Medium baseline - 繳交字體的對比檔案 (以 experiment_學號_姓名.zip 命名) </td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox4"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox4" checked></td>
           <td id='m4'>2</td>
           <td>Strong baseline - 最後生成結果 (於infer_1資料夾內)</td>
         </tr>
@@ -237,6 +239,21 @@
    <div class="row hw12">
     <div class="col-md-12 twenty">          
       <img src="simple/image_val.png" width="1200px" height="auto"/>
+      
+    </div>
+  </div>
+
+  <div class="row hw12">
+    <div class="col-md-12 twenty">      
+      <h1>Medium Baseline</h1>    
+      <a href="https://github.com/kenforever/ct2024s/blob/main/hw05/medium/experiment_109AB0057_%E6%A2%81%E5%AF%8C%E8%B2%A1.zip" >experiment_109AB0057_梁富財.zip</a>
+    </div>
+  </div>
+
+  <div class="row hw12">
+    <div class="col-md-12 twenty">          
+      <h1>Strong Baseline</h1>
+      <a href="https://github.com/kenforever/ct2024s/blob/main/hw05/strong/infer_109AB0057_%E6%A2%81%E5%AF%8C%E8%B2%A1.zip" >infer_109AB0057_梁富財.zip</a>
       
     </div>
   </div>
